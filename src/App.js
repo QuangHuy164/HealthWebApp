@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-route-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Box } from '@mui/material'
 import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';

@@ -21,6 +21,7 @@ const Banner = () => (
       Exercise
     </Typography>
     <img src={BannerImage} alt="hero-banner" className="hero-banner-img" />
+   
   </Box>
 );
 export default Banner

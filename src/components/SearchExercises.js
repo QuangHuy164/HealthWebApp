@@ -12,7 +12,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart }) => {
     useEffect(() => {
         const fetchExercisesData = async () => {
           const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-    
+          console.log(bodyPartsData);
           setBodyParts(['all', ...bodyPartsData]);
         };
     
@@ -31,6 +31,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart }) => {
                            || item.equipment.toLowerCase().includes(search)
                            || item.bodyPart.toLowerCase().includes(search),
                   );
+                  console.log(exercisesData)
                   setSearch('');
                   setExercises(searchedExercises)
         }
@@ -41,7 +42,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart }) => {
     return (
         <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
             <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="49px" textAlign="center">
-                Awesome Exercises You <br /> Should Know
+                Suitable Exercises For You <br /> To Try
             </Typography>
             <Box position="relative" mb="72px">
                 <TextField
